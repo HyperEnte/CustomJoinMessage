@@ -3,7 +3,7 @@ Let your players change their Joinmessage
 # Features
 + Individual JoinMessages per player
 + Permission in Config
-+ Default JoinMessage changeable in the config
++ Default JoinMessage changeable in the config and Ingame
 + UI Input
 + JSON Support
 # Placeholders
