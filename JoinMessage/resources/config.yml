@@ -1,0 +1,23 @@
+##################### Config File JoinMessage ########################
+######################################################################
+
+# Settings
+permission: "cmd.joinmessage"
+
+permission.admin: "cmd.defaultmessage"
+
+timezone: "Europe/Berlin"
+
+# UI
+title: "JoinMessage"
+
+# Messages
+prefix: "§6JoinMessage §7>> "
+
+default: "[PLAYER] has joined the server"
+
+noperm: "§4You dont have the permission to do this"
+
+success: "§aYou successfully changed your JoinMessage"
+
+error: "§cError"
