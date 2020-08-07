@@ -1,6 +1,9 @@
 ##################### Config File JoinMessage ########################
 ######################################################################
 
+# Version (Dont change this)
+version: "2"
+
 # Settings
 permission: "cmd.joinmessage"
 
@@ -16,8 +19,16 @@ prefix: "§6JoinMessage §7>> "
 
 default: "[PLAYER] has joined the server"
 
+default.leave: "[PLAYER] left the server"
+
 noperm: "§4You dont have the permission to do this"
 
-success: "§aYou successfully changed your JoinMessage"
+success.jm: "§aYou successfully changed your JoinMessage"
+
+sucess.dm: "§aYou successfully changed the default JoinMessage"
+
+sucess.lm: "§aYou sucessfully changed your LeaveMessage"
+
+sucess.dlm: "§aYou successfully changed the default LeaveMessage"
 
 error: "§cError"
