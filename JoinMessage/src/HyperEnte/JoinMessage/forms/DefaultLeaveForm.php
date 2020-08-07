@@ -8,16 +8,16 @@ use pocketmine\Player;
 use pocketmine\utils\Config;
 
 
-class DefaultForm extends CustomForm{
+class DefaultLeaveForm extends CustomForm{
 	public function __construct(){
 		$callable = function (Player $player, $data){
 			$name = $player->getName();
 			if($data === 0){
 				return;
 			}
-			JoinMessage::getMain()->getConfig()->set("default", $data[0]);
+			JoinMessage::getMain()->getConfig()->set("default.leave", $data[0]);
 			JoinMessage::getMain()->getConfig()->save();
-			$player->sendMessage(strval(JoinMessage::getMain()->getConfig()->get("success.dm")));
+			$player->sendMessage(strval(JoinMessage::getMain()->getConfig()->get("success.dlm")));
 		};
 		parent::__construct($callable);
 		$this->setTitle(JoinMessage::getMain()->getConfig()->get("title"));
