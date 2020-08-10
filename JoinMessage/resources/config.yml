@@ -1,25 +1,30 @@
 ##################### Config File JoinMessage ########################
 ######################################################################
 
-# Version (Dont change this)
-version: "2"
+## Version (Dont change this)
+version: "3"
 
-# Settings
+## Settings
 permission: "cmd.joinmessage"
 
 permission.admin: "cmd.defaultmessage"
 
 timezone: "Europe/Berlin"
 
-# UI
+# Teleport the player to the servers spawn
+teleport.to.spawn: "true"
+
+## UI
 title: "JoinMessage"
 
-# Messages
+## Messages
 prefix: "§6JoinMessage §7>> "
 
 default: "[PLAYER] has joined the server"
 
 default.leave: "[PLAYER] left the server"
+
+default.firstjoin: "The player [PLAYER] joined the server for the first time!"
 
 noperm: "§4You dont have the permission to do this"
 
@@ -32,3 +37,9 @@ sucess.lm: "§aYou sucessfully changed your LeaveMessage"
 sucess.dlm: "§aYou successfully changed the default LeaveMessage"
 
 error: "§cError"
+
+## World JoinMessage
+
+enabled: "false"
+
+default.world: "[PLAYER] joined the world [WORLD]"
