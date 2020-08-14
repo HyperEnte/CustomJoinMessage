@@ -1,3 +1,4 @@
+[![](https://poggit.pmmp.io/shield.dl.total/CustomJoinMessage)](https://poggit.pmmp.io/p/CustomJoinMessage)
 # CustomJoinMessage
 Let your players change their Joinmessage
 # Features
