@@ -48,11 +48,6 @@ class EventListener implements Listener{
 			);
 			$event->setJoinMessage($joinmsg);
 		}
-		if($config->get($player->getName()) == false){
-			$config->set($player->getName(), ["joinmessage" => "default", "leavemessage" => "default"]);
-			$config->save();
-			$event->setJoinMessage(JoinMessage::getMain()->getConfig()->get("default.firstjoin"));
-		}
 		if(JoinMessage::getMain()->getConfig()->get("teleport.to.spawn") === "true"){
 			$player->teleport($player->getServer()->getDefaultLevel()->getSpawnLocation());
 		}
