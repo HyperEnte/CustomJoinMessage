@@ -13,3 +13,7 @@ Let your players change their Joinmessage
 + Colors
 + (SOON) [Device] - The device, the player is playing on
 + [Rank] - Show the players PurePerms Group
+# Sceenshots
+![The UI](/JoinMessage/images/UI.png)
+
+![Placeholders](/JoinMessage/images/Placeholders.png)
