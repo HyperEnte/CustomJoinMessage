@@ -2,7 +2,7 @@
 ######################################################################
 
 ## Version (Dont change this)
-version: "3"
+version: "4"
 
 ## Settings
 permission: "cmd.joinmessage"
@@ -10,6 +10,9 @@ permission: "cmd.joinmessage"
 permission.admin: "cmd.defaultmessage"
 
 timezone: "Europe/Berlin"
+
+# H = Hour ; i = Minute
+timeformat: "H:i"
 
 # Teleport the player to the servers spawn
 teleport.to.spawn: "true"
