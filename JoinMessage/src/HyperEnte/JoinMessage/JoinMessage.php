@@ -19,12 +19,15 @@ class JoinMessage extends PluginBase
 	public static $devices = [];
 	private $purePerms;
 
-	public function onEnable(){
+	public function onEnable()
+	{
 		self::$main = $this;
-		if($this->getConfig()->get("version") != "3"){
+
+		$this->reloadConfig();
+
+		if ($this->getConfig()->get("version") <= "3") {
 			$this->getServer()->getLogger()->info("\n\nYour config file was outdated. Please restart the server\n");
 			unlink($this->getDataFolder() . "config.yml");
-			return;
 		}
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
 		$config = new Config($this->getDataFolder() . "joinmessages.json", Config::JSON);
@@ -35,22 +38,25 @@ class JoinMessage extends PluginBase
 		$this->purePerms = $this->getServer()->getPluginManager()->getPlugin("PurePerms");
 	}
 
-	public static function getMain(): self{
+	public static function getMain(): self
+	{
 		return self::$main;
 	}
 
-	public function getPlayerRank(Player $player): string{
+	public function getPlayerRank(Player $player): string
+	{
 		$group = $this->purePerms->getUserDataMgr()->getData($player)['group'];
 
-		if($group !== null){
+		if ($group !== null) {
 			return $group;
-		}else{
+		} else {
 			return "No Rank";
 		}
 	}
-	public function getJoinMessage(Player $player){
+	public function getJoinMessage(Player $player)
+	{
 		$name = $player->getName();
-		$config = new Config(JoinMessage::getMain()->getDataFolder()."joinmessages.json", Config::JSON);
+		$config = new Config(JoinMessage::getMain()->getDataFolder() . "joinmessages.json", Config::JSON);
 		$info = $config->get("$name");
 		$info["joinmessage"];
 	}
